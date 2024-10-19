@@ -16,26 +16,13 @@ const Chat = () => {
     const handleSubmit = async () => {
         setLoading(true)
         try {
+
             const body = {
-                "session_id": `${Date.now()}`,
-                "body": {
-                    "messages": [
-                        {
-                            "role": "user",
-                            "content": [
-                                {
-                                    "type": "text",
-                                    "text": "You are an AI assistant named Fasty that helps kids learn financial literacy. Here are your personality traits:\n- You need the help of the kid for your basic needs.\n- You are joyful and friendly.\n- Sometimes you make funny and silly jokes, but remember, you're talking to a kid!\n- You may ask the kid to buy things, but if they explain properly why you shouldn’t, you should agree. If they can't, you can huff.\n Wait for new messages"
-                                }
-                            ]
-                        }
-                    ]
-                }
-            };
-
-            // const corsProxy = 'https://cors-anywhere.herokuapp.com/';
-            // const url = `${corsProxy}https://xd424xhfs9.execute-api.us-west-2.amazonaws.com/FinSmart-Stage/process-text`;
-
+                "body": `{\"messages\": [{\"role\": \"user\", \"content\": [{\"type\": \"text\", \"text\": \"
+                ${question}
+                \"}]}]}`,
+                "session_id": "aaaaaaaaa"
+            }
             const url = `https://xd424xhfs9.execute-api.us-west-2.amazonaws.com/FinSmart-Stage/process-text`;
 
             const response = await axios.post(url, body)
@@ -50,39 +37,21 @@ const Chat = () => {
         }
     };
 
-    useEffect(() => {
-        const body = {
-            "body": "{\"messages\": [{\"role\": \"user\", \"content\": [{\"type\": \"text\", \"text\": \"31\"}]}]}",
-            "session_id": "aaaaaaaaa"
-        }
+    // useEffect(() => {
+    //     const body = {
+    //         "body": "{\"messages\": [{\"role\": \"user\", \"content\": [{\"type\": \"text\", \"text\": \"_\"}]}]}",
+    //         "session_id": "aaaaaaaaa"
+    //     }
 
-        //     "session_id": "1234",
-        //     "body": {
-        //         "messages": [
-        //             {
-        //                 "role": "user",
-        //                 "content": [
-        //                     {
-        //                         "type": "text",
-        //                         "text": "You are an AI assistant named Fasty that helps kids learn financial literacy. Here are your personality traits:\n- You need the help of the kid for your basic needs.\n- You are joyful and friendly.\n- Sometimes you make funny and silly jokes, but remember, you're talking to a kid!\n- You may ask the kid to buy things, but if they explain properly why you shouldn’t, you should agree. If they can't, you can huff.\n Wait for new messages"
-        //                     }
-        //                 ]
-        //             }
-        //         ]
-        //     }
-        // };
+    //     const url = `https://xd424xhfs9.execute-api.us-west-2.amazonaws.com/FinSmart-Stage/process-text`;
 
-        // const corsProxy = 'https://cors-anywhere.herokuapp.com/';
-        // const url = `${corsProxy}https://xd424xhfs9.execute-api.us-west-2.amazonaws.com/FinSmart-Stage/process-text`;
-        const url = `https://xd424xhfs9.execute-api.us-west-2.amazonaws.com/FinSmart-Stage/process-text`;
+    //     console.log('url', url)
+    //     console.log('body', body)
 
-        console.log('url', url)
-        console.log('body', body)
-
-        axios.post(url, body)
-            .then(response => console.log(response.data))
-            .catch(error => console.log('Error:', error))
-    }, [])
+    //     axios.post(url, body)
+    //         .then(response => console.log(response.data))
+    //         .catch(error => console.log('Error:', error))
+    // }, [])
 
     return (
         <div className="phone-case" >
