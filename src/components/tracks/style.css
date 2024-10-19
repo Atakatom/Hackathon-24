@@ -1,5 +1,5 @@
 .medium{
-    background-image: url("C:\Users\atakan\Desktop\Hackathon'24\hello_world\public\images\fasty.jpg");
+    background-image: url("../../../public/images/fasty.jpg");
     height: 400px;
     position: relative;
 }
