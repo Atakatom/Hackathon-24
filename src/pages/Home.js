@@ -44,8 +44,9 @@ const Home = () => {
         }
       };
 
-      const corsProxy = 'https://cors-anywhere.herokuapp.com/';
-      const url = `${corsProxy}https://xd424xhfs9.execute-api.us-west-2.amazonaws.com/FinSmart-Stage/process-text`;
+      // const corsProxy = 'https://cors-anywhere.herokuapp.com/';
+      // const url = `${corsProxy}https://xd424xhfs9.execute-api.us-west-2.amazonaws.com/FinSmart-Stage/process-text`;
+      const url = `https://xd424xhfs9.execute-api.us-west-2.amazonaws.com/FinSmart-Stage/process-text`;
 
       const response = await axios.post(url, body)
       console.log('response', response)
@@ -77,8 +78,8 @@ const Home = () => {
       }
     };
 
-    const corsProxy = 'https://cors-anywhere.herokuapp.com/';
-    const url = `${corsProxy}https://xd424xhfs9.execute-api.us-west-2.amazonaws.com/FinSmart-Stage/process-text`;
+    // const corsProxy = 'https://cors-anywhere.herokuapp.com/';
+    const url = `https://xd424xhfs9.execute-api.us-west-2.amazonaws.com/FinSmart-Stage/process-text`;
 
     axios.post(url, body)
       .then(response => console.log(response.data))
