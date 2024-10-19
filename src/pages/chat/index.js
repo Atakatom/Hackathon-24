@@ -16,11 +16,8 @@ const Chat = () => {
     const handleSubmit = async () => {
         setLoading(true)
         try {
-
             const body = {
-                "body": `{\"messages\": [{\"role\": \"user\", \"content\": [{\"type\": \"text\", \"text\": \"
-                ${question}
-                \"}]}]}`,
+                "body": "{\"messages\": [{\"role\": \"user\", \"content\": [{\"type\": \"text\", \"text\": \"" + question + "\"}]}]}",
                 "session_id": "aaaaaaaaa"
             }
             const url = `https://xd424xhfs9.execute-api.us-west-2.amazonaws.com/FinSmart-Stage/process-text`;
