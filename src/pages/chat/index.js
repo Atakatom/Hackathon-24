@@ -70,6 +70,9 @@ const Chat = () => {
         // const url = `${corsProxy}https://xd424xhfs9.execute-api.us-west-2.amazonaws.com/FinSmart-Stage/process-text`;
         const url = `https://xd424xhfs9.execute-api.us-west-2.amazonaws.com/FinSmart-Stage/process-text`;
 
+        console.log('url', url)
+        console.log('body', body)
+
         axios.post(url, body)
             .then(response => console.log(response.data))
             .catch(error => console.log('Error:', error))
