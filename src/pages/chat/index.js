@@ -37,21 +37,21 @@ const Chat = () => {
         }
     };
 
-    // useEffect(() => {
-    //     const body = {
-    //         "body": "{\"messages\": [{\"role\": \"user\", \"content\": [{\"type\": \"text\", \"text\": \"_\"}]}]}",
-    //         "session_id": "aaaaaaaaa"
-    //     }
+    useEffect(() => {
+        const body = {
+            "body": "{\"messages\": [{\"role\": \"user\", \"content\": [{\"type\": \"text\", \"text\": \"_\"}]}]}",
+            "session_id": "aaaaaaaaa"
+        }
 
-    //     const url = `https://xd424xhfs9.execute-api.us-west-2.amazonaws.com/FinSmart-Stage/process-text`;
+        const url = `https://xd424xhfs9.execute-api.us-west-2.amazonaws.com/FinSmart-Stage/process-text`;
 
-    //     console.log('url', url)
-    //     console.log('body', body)
+        console.log('url', url)
+        console.log('body', body)
 
-    //     axios.post(url, body)
-    //         .then(response => console.log(response.data))
-    //         .catch(error => console.log('Error:', error))
-    // }, [])
+        axios.post(url, body)
+            .then(response => console.log(response.data))
+            .catch(error => console.log('Error:', error))
+    }, [])
 
     return (
         <div className="phone-case" >
