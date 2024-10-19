@@ -1,0 +1,23 @@
+.messageField{
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+}
+
+textarea {
+    border-radius: 10px;
+    resize: none;
+}
+
+.submit {
+    background-color: #F6FEF7;
+    color: #02A959;
+    border-radius: 10px;
+    border:0;
+    height: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.bottom {
+    padding-top: 60px;
+}

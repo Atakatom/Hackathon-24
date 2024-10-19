@@ -1,0 +1,48 @@
+.navigation {
+    margin-top: 5px;
+    border-radius: 30px;
+    height: 9%;
+    width: 320px;
+    background-color: #02a8555e;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.icon {
+    width: 25px;
+    height: 25px;
+}
+
+.item3 {
+    margin: -5px;
+}
+
+.item2 {
+    width: 30%;
+}
+
+.item1 {
+    margin-left: 10px;
+    width: 30%;
+    height: 100%;
+    text-align: center;
+    grid-area: a;
+    display: block;
+}
+
+.icon-container {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.title-container {
+    display: flex;
+    justify-content: center;
+}

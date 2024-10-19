@@ -1,0 +1,121 @@
+.medium{
+    background-image: url("C:\Users\atakan\Desktop\Hackathon'24\hello_world\public\images\fasty.jpg");
+    height: 400px;
+    position: relative;
+}
+
+.track-bar{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.tracker{
+    display: flex;
+    width: 33%;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); 
+    margin: 5px;
+    border-radius: 10px;
+}
+
+.track-icon{
+    width: 22px;
+    height: 25px;
+}
+
+.tr-icon-wrapper{
+    width: 30px;
+    height: 30px;
+    border: 1px solid;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4px;
+}
+
+.btn-container-wrapper{
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    right: 0;
+}
+
+.btn-container-org{
+    height: 50px;
+    width: 120px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    background-color: #F8BF5D;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+}
+
+.btn-org{
+    font-size: xx-small;
+    height: 30px;
+    width: 70px;
+    margin:5px;
+    background-color: white;
+    color: #D88B09;
+    border: 0px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.btn-container-blue{
+    height: 50px;
+    width: 120px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    background-color: #8CC4F7;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+}
+
+.btn-org:active{
+    border: 1px solid;
+}
+
+.btn-blue{
+    font-size: xx-small;
+    height: 30px;
+    width: 70px;
+    margin:5px;
+    background-color: white;
+    color: #0F7FE5;
+    border: 0px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.btn-blue:active{
+    border: 1px solid;
+}
+
+.btn-icon {
+    width: 22px;
+    height: 22px;
+}
+
+.coin-icon {
+    width: 16px;
+    height:16px;
+}
+
+.coin-icon::before {
+    content: "Read this -";
+    background-color: yellow;
+    color: red;
+    font-weight: bold;
+}
