@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import './style.css'
 
 const Tracks = () => {
-    const [money, setMoney] = useState(35)
+    const [money, setMoney] = useState(60)
     const [waterRatio, setWaterRatio] = useState(50)
     const [foodRatio, setFoodRatio] = useState(50)
 
@@ -57,28 +57,28 @@ const Tracks = () => {
                 <div className="tracker">
                     <div className="tr-icon-wrapper"
                         style={{ background: getWaterBgColor(foodRatio) }}>
-                        <img src='/images/water.png' alt='' className="track-icon" />
+                        <img src='https://cdn-icons-png.flaticon.com/512/3100/3100566.png' alt='' className="track-icon" />
                     </div>
                     <em>%{waterRatio}</em>
                 </div>
                 <div className="tracker">
                     <div className="tr-icon-wrapper"
                         style={{ background: getCarrotBgColor(foodRatio) }}>
-                        <img src='/images/carrot.png' alt='' className="track-icon" />
+                        <img src='https://cdn3d.iconscout.com/3d/premium/thumb/carrot-3d-icon-download-in-png-blend-fbx-gltf-file-formats--vegetable-healthy-vegetarian-organic-fresh-farm-harvest-agriculture-pack-icons-9741714.png?f=webp' alt='' className="track-icon" />
                     </div>
                     <em>%{foodRatio}</em>
                 </div>
             </div>
             <div className="btn-container-wrapper">
                 <div className="btn-container-org">
-                    <img src='/images/carrot.png' alt='' className="btn-icon" />
+                    <img src='https://cdn3d.iconscout.com/3d/premium/thumb/carrot-3d-icon-download-in-png-blend-fbx-gltf-file-formats--vegetable-healthy-vegetarian-organic-fresh-farm-harvest-agriculture-pack-icons-9741714.png?f=webp' alt='' className="btn-icon" />
                     <button className="btn-org" onClick={handleBuyCarrotClick}>
                         <em>Havuç 5</em>
                         <img src='/images/coin.png' alt='' className="coin-icon" />
                     </button>
                 </div>
                 <div className="btn-container-blue">
-                    <img src='/images/water.png' alt='' className="btn-icon" />
+                    <img src='https://cdn-icons-png.flaticon.com/512/3100/3100566.png' alt='' className="btn-icon" />
                     <button className="btn-blue" onClick={handleBuyWaterClick}>
                         <em>Su 2</em>
                         <img src='/images/coin.png' alt='' className="coin-icon" />
