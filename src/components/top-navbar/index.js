@@ -6,7 +6,7 @@ const TopNavbar = () => {
     return (
         <nav className="navigation">
             <div className='title-container'>
-                <label className='item1'>FastY</label>
+                <label className='item1'>RunY</label>
             </div>
             <div className='item2' />
             <div className='icon-container item3'>

@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import axios from 'axios'
 import Tracks from "../../components/tracks";
 import './style.css'
+import ChatComponent from "../../components/new-chat";
 
 const Chat = () => {
     const [loading, setLoading] = useState(false);
@@ -18,7 +19,7 @@ const Chat = () => {
         try {
             const body = {
                 "body": "{\"messages\": [{\"role\": \"user\", \"content\": [{\"type\": \"text\", \"text\": \"" + question + "\"}]}]}",
-                "session_id": "aaaaaaaaa"
+                "session_id": "abbabasdbsadg"
             }
             const url = `https://xd424xhfs9.execute-api.us-west-2.amazonaws.com/FinSmart-Stage/process-text`;
 
@@ -28,33 +29,33 @@ const Chat = () => {
             setResponseOutput(response?.data?.model_output)
             console.log('response', response?.data)
         } catch (error) {
-            console.error('Error submitting text:', error);
+            console.error('Erreor submitting text:', error);
         } finally {
             setLoading(false)
         }
     };
 
-    useEffect(() => {
-        const body = {
-            "body": "{\"messages\": [{\"role\": \"user\", \"content\": [{\"type\": \"text\", \"text\": \"_\"}]}]}",
-            "session_id": "aaaaaaaaa"
-        }
+    // useEffect(() => {
+    //     const body = {
+    //         "body": "{\"messages\": [{\"role\": \"user\", \"content\": [{\"type\": \"text\", \"text\": \"_\"}]}]}",
+    //         "session_id": "aaaaaaaaa"
+    //     }
 
-        const url = `https://xd424xhfs9.execute-api.us-west-2.amazonaws.com/FinSmart-Stage/process-text`;
+    //     const url = `https://xd424xhfs9.execute-api.us-west-2.amazonaws.com/FinSmart-Stage/process-text`;
 
-        console.log('url', url)
-        console.log('body', body)
+    //     console.log('url', url)
+    //     console.log('body', body)
 
-        axios.post(url, body)
-            .then(response => console.log(response.data))
-            .catch(error => console.log('Error:', error))
-    }, [])
+    //     axios.post(url, body)
+    //         .then(response => console.log(response.data))
+    //         .catch(error => console.log('Error:', error))
+    // }, [])
 
     return (
         <div className="phone-case" >
             <TopNavbar />
             <Tracks />
-            <div className="messageField">
+            {/* <div className="messageField">
                 <textarea
                     value={question}
                     onChange={handleTextChange}
@@ -64,8 +65,9 @@ const Chat = () => {
                 />
                 <br />
                 <button className="submit" onClick={handleSubmit} disabled={loading}>Gönder</button>
-                {loading && <div className="loader">Loading...</div>}  {/* Show loader when loading */}
-            </div>
+                {loading && <div className="loader">Loading...</div>}  {/* Show loader when loading * </div> */}
+
+            <ChatComponent />
             <img src="/images/bottom.png" className="bottom" alt='' />
         </div>
     )
